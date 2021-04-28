@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <title>Timothy Hsu</title>
+</head>
+
+<body>
+    <header>
+        <div id="header-content">
+            <img src="img/logo.png" alt="logo" id="logo-header">
+            <nav>
+                <ul>
+                    <li><a href="#bio">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="scroll-container">
+            <section id="bio" class="scroll-child">
+                <div id="title-paragraph">
+                    <h2>Hello, I'm a developer!</h2>
+                    <p>
+                        Welcome to my personal page!<br>
+                        I'm Timothy Hsu, a junior .NET Developer.<br>
+                        Keep scrolling to find out more!
+
+                    </p>
+                </div>
+                <img src="img/portrait.jpg" alt="picture of me">
+            </section>
+            <section id="skills" class="scroll-child">
+                <div class="container">
+                    <h2>My Skills</h2>
+                    <div id="skills-logos">
+                        <div class="card">
+                            <img src="img/csharp.png" alt="c-sharp logo">
+                            <div>
+                                <h3>C# Programming</h3>
+                                <p>
+                                    My programming language of choice.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <img src="img/net.jpg" alt="microsoft dot net logo">
+                            <div>
+                                <h3>.NET technologies</h3>
+                                <p>
+                                    -.NET Framework<br>
+                                    -.NET Core<br>
+                                    - Winforms<br>
+                                    -ASP.NET MVC
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <img src="img/js.jpg" alt="javascript logo">
+                            <div>
+                                <h3>Front end</h3>
+                                <p>
+                                    -HTML<br>
+                                    -CSS<br>
+                                    -Javascript
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <img src="img/sql.jpg" alt="microsoft sql server logo">
+                            <div>
+                                <h3>SQL Server</h3>
+                                <p>
+                                    -Miscrosoft SQL Server Management Studio<br>
+                                    -Dapper
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <button>Download CV</button>
+                </div>
+
+            </section>
+            <section id="projects" class="scroll-child">
+                <div class="container">
+                    <h2>Projects</h2>
+                    <div id="projects-cards">
+                        <div class="card">
+                            <h3>Title</h3>
+                            <img src="img/placeholder.jpg" alt="screenshot">
+                            <p>Description text</p>
+                            <button>View on GitHub</button>
+                        </div>
+                        <div class="card">
+                            <h3>Title</h3>
+                            <img src="img/placeholder.jpg" alt="screenshot">
+                            <p>
+                                Description text<br>
+                                More description text
+                            </p>
+                            <button>View on GitHub</button>
+                        </div>
+                        <div class="card">
+                            <h3>Title</h3>
+                            <img src="img/placeholder.jpg" alt="screenshot">
+                            <p>Description text</p>
+                            <button>View on GitHub</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section id="contact" class="scroll-child">
+                <div class="container">
+                    <h2>Contact</h2>
+                    <form action="">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="email">E-mail</label>
+                            <input type="text" name="email" id="email">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="comment">Message</label>
+                            <textarea name="comment" id="comment" cols="30" rows="10">
+                    </textarea>
+                        </div>
+                        <br>
+                        <div>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>Timothy Hsu 2021</p>
+    </footer>
+
+</body>
+
+</html>
