@@ -4,8 +4,6 @@ html {
 }
 
 .scroll-child {
-    display: flex;
-    align-items: center;
     min-height: 100vh;
     scroll-snap-align: start;
 }
@@ -32,6 +30,7 @@ p {
     padding-bottom: 2vh;
     padding-right: 2vw;
     padding-left: 2vw;
+    border-radius: 5px;
     box-shadow: 0px 0px 10px gray;
 }
 
@@ -57,7 +56,8 @@ button:hover {
 }
 
 .container {
-    height: 80vh;
+    padding-top: 4.5em;
+    height: 80%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -83,18 +83,20 @@ header {
     position: fixed;
     top: 0;
     z-index: 1;
-    width: 100vw;
+    width: 100%;
     background-color: white;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    height: 4.5em;
     box-shadow: 0px 1px 10px gray;
+    display: flex;
+    align-items: center;
 }
 
 header img {
-    height: 3.2em;
+    height: 4em;
 }
 
 #header-content {
+    width: inherit;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -136,13 +138,13 @@ nav a:hover {
 #bio {
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#title-paragraph {
-    width: 60%;
+#bio .container {
+    display: flex;
+    flex-direction: row;
 }
 
 #bio img {
@@ -153,13 +155,20 @@ nav a:hover {
 }
 
 #skills {
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
 }
 
 #skills img {
     height: 8em;
     padding-bottom: 2em;
+}
+
+#skills .container {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #skills-logos {
@@ -178,12 +187,22 @@ nav a:hover {
     border-radius: 5px;
 }
 
+#projects {
+    height: 100vh;
+}
+#projects .container{
+    height: 90%;
+}
+
 #projects img {
-    width: 17em;
+    width: 100%;
+    margin-bottom: 5%;
+    border-radius: 5px;
 }
 
 #projects .card {
-    height: 22em;
+    width: 28%;
+    height: 100%;
     padding-right: 1vw;
     padding-left: 1vw;
     display: flex;
@@ -206,8 +225,22 @@ nav a:hover {
     justify-content: space-between;
 }
 
+#contact {
+    height: 100vh;
+}
+
 #contact .container {
+    height: 70%;
+    padding-left: 2vw;
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+#contact input, #contact textarea {
+    border-radius: 5px;
+    border: none;
 }
 
 #contact form {
@@ -234,43 +267,46 @@ footer {
 footer p {
     margin: 0px 0px 0px 0px;
 }
-#hamburger{
+
+#hamburger {
     visibility: hidden;
     position: absolute;
     z-index: 2;
     height: 60%;
     width: 5vw;
     right: 2vw;
-
 }
 
-#hamburger div{
+#hamburger div {
     border-radius: 2px;
     width: 100%;
     height: 12%;
     background-color: black;
-    margin-top: 0.8vh;
-    margin-bottom: 0.8vh;
+    margin-top: 15%;
+    margin-bottom: 15%;
 }
-#dropdown{
-    visibility: hidden;
+
+#dropdown {
     position: fixed;
-    padding-top: 9vh;
-    padding-bottom: 2.5vh;
+    visibility: hidden;
+    top: 50px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     width: 100%;
-    height: 20vh;
+    height: 10em;
+    min-height: fit-content;
     background-color: white;
     box-shadow: 0px 1px 10px gray;
-    
 }
-#dropdown ul{
+
+#dropdown ul {
     height: 90%;
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    
 }
+
 #dropdown a {
     color: black;
 }
@@ -290,37 +326,47 @@ footer p {
         padding-right: 20vw;
     }
     #skills-logos .card {
-        width: 15vw;
+        width: 15%;
     }
-    #projects img{
-        width: 15em;
+    #projects img {
+        width: 100%;
     }
 }
+
 @media only screen and (max-width:1400px) {
     main, #header-content {
         padding-left: 10vw;
         padding-right: 10vw;
     }
 }
+
 @media only screen and (max-width:1300px) {
     main, #header-content {
         padding-left: 5vw;
         padding-right: 5vw;
     }
 }
+
 @media only screen and (max-width:1100px) {
-    #bio img{
+    #bio img {
         height: 35vw;
     }
-    p{
+    p {
         font: 1em;
     }
 }
-@media only screen and (max-width:900px) {
-    #hamburger{
+
+@media only screen and (max-width:900px) and (orientation: portrait) {
+    #bio p, #skills p, #projects,button {
+        font-size: 0.8em;
+    }
+    h2 {
+        font-size: 1.3m;
+    }
+    #hamburger {
         visibility: visible;
     }
-    #bio{
+    #bio .container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -330,31 +376,100 @@ footer p {
         padding-left: 2vw;
         padding-right: 2vw;
     }
-    nav{
+    .container {
+        height: 90vh;
+    }
+    nav {
         visibility: collapse;
     }
-    #skills img{
-        height:initial;
-        width: 90%;
+    #skills img {
+        height: initial;
+        width: 10%;
+        padding:0;
     }
-    #projects .container{
+    #skills .container{
+        height: 95%;
         justify-content: center;
+        align-items: center;
+    }
+    #skills-logos {
+        width: inherit;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #skills .card{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        height: 15%;
+    }
+    #skills .card div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 85%;
+    }
+    #skills h3{
+        text-align: left;
+        font-size: 1em;
+    }
+    #skills p{
+        text-align: right;
     }
     #projects h2{
-        margin-bottom: 10vh;
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
-    #projects img{
-        width: 95%;
+    #projects h3{
+        padding-top: 0;
+        padding-bottom: 0;
     }
-    #projects .card{
-        width: 29vw;
+    #projects-cards{
+        height: 90%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
-    #projects button{
-        width: 80%;
+    #projects .container {
+        height: 85%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
     }
+    #projects img {
+        width: 38%;
+        margin:0;
+    }
+    #projects .card {
+        height: 28%;
+        width: 90%;
+        padding:0px;
+        padding-left: 2%;;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #projects .cardtext {
+        text-align: left;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #projects button {
+        width: 50%;
+
+    }
+    
+    
 }
+
 @media only screen and (max-width:600px) {
-    #hamburger{
+    #hamburger {
         width: 8vw;
     }
 }
