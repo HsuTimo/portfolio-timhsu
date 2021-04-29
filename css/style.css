@@ -25,7 +25,8 @@ p {
     font-size: 1.3em;
     line-height: 1.8em;
 }
-.card{
+
+.card {
     background-color: white;
     padding-top: 2vh;
     padding-bottom: 2vh;
@@ -33,10 +34,12 @@ p {
     padding-left: 2vw;
     box-shadow: 0px 0px 10px gray;
 }
-.card p{
+
+.card p {
     font-size: 1em;
 }
-button{
+
+button {
     border: none;
     height: 4em;
     width: 14em;
@@ -46,13 +49,14 @@ button{
     border-radius: 5px;
     box-shadow: 0px 0px 10px gray;
     transition: transform 1s;
-    
 }
-button:hover{
+
+button:hover {
     background-color: black;
     transform: scale(1.05);
 }
-.container{
+
+.container {
     height: 80vh;
     width: 100%;
     display: flex;
@@ -60,8 +64,8 @@ button:hover{
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
-
 }
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -74,7 +78,6 @@ main, #header-content {
 main {
     background-color: #f1f0ee;
 }
-
 
 header {
     position: fixed;
@@ -96,6 +99,7 @@ header img {
     justify-content: space-between;
     align-items: center;
 }
+
 nav {
     display: flex;
     font-weight: 600;
@@ -109,7 +113,7 @@ nav ul {
 
 nav li {
     list-style: none;
-    margin-right: 2em;
+    margin-right: 2vw;
 }
 
 nav li:last-child {
@@ -128,6 +132,7 @@ nav a:hover {
     text-decoration: none;
     color: #00c2cb;
 }
+
 #bio {
     min-height: 100vh;
     display: flex;
@@ -135,9 +140,11 @@ nav a:hover {
     justify-content: space-between;
     flex-direction: row;
 }
+
 #title-paragraph {
     width: 60%;
 }
+
 #bio img {
     height: 40vh;
     border-radius: 5px;
@@ -156,10 +163,10 @@ nav a:hover {
 }
 
 #skills-logos {
-    width:inherit;
+    width: inherit;
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 #skills-logos .card {
@@ -170,10 +177,12 @@ nav a:hover {
     width: 9vw;
     border-radius: 5px;
 }
-#projects img{
+
+#projects img {
     width: 17em;
 }
-#projects .card{
+
+#projects .card {
     height: 22em;
     padding-right: 1vw;
     padding-left: 1vw;
@@ -182,32 +191,38 @@ nav a:hover {
     justify-content: flex-start;
     align-items: center;
 }
-#projects h3{
+
+#projects h3 {
     padding-bottom: 1em;
 }
-#projects p{
+
+#projects p {
     height: 20%;
 }
-#projects-cards{
+
+#projects-cards {
     width: inherit;
     display: flex;
     justify-content: space-between;
-} 
-#contact .container{
+}
+
+#contact .container {
     align-items: flex-start;
 }
-#contact form{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-#contact form div{
+
+#contact form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-footer{
+#contact form div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer {
     background-color: black;
     color: white;
     height: 10vh;
@@ -215,7 +230,131 @@ footer{
     flex-direction: row;
     align-items: center;
 }
-footer p{
+
+footer p {
     margin: 0px 0px 0px 0px;
 }
+#hamburger{
+    visibility: hidden;
+    position: absolute;
+    z-index: 2;
+    height: 60%;
+    width: 5vw;
+    right: 2vw;
 
+}
+
+#hamburger div{
+    border-radius: 2px;
+    width: 100%;
+    height: 12%;
+    background-color: black;
+    margin-top: 0.8vh;
+    margin-bottom: 0.8vh;
+}
+#dropdown{
+    visibility: hidden;
+    position: fixed;
+    padding-top: 9vh;
+    padding-bottom: 2.5vh;
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+    box-shadow: 0px 1px 10px gray;
+    
+}
+#dropdown ul{
+    height: 90%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+#dropdown a {
+    color: black;
+}
+
+#dropdown a:link {
+    text-decoration: none;
+}
+
+#dropdown a:hover {
+    text-decoration: none;
+    color: #00c2cb;
+}
+
+@media only screen and (max-width:1700px) {
+    main, #header-content {
+        padding-left: 20vw;
+        padding-right: 20vw;
+    }
+    #skills-logos .card {
+        width: 15vw;
+    }
+    #projects img{
+        width: 15em;
+    }
+}
+@media only screen and (max-width:1400px) {
+    main, #header-content {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+}
+@media only screen and (max-width:1300px) {
+    main, #header-content {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+}
+@media only screen and (max-width:1100px) {
+    #bio img{
+        height: 35vw;
+    }
+    p{
+        font: 1em;
+    }
+}
+@media only screen and (max-width:900px) {
+    #hamburger{
+        visibility: visible;
+    }
+    #bio{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    main, #header-content {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    nav{
+        visibility: collapse;
+    }
+    #skills img{
+        height:initial;
+        width: 90%;
+    }
+    #projects .container{
+        justify-content: center;
+    }
+    #projects h2{
+        margin-bottom: 10vh;
+    }
+    #projects img{
+        width: 95%;
+    }
+    #projects .card{
+        width: 29vw;
+    }
+    #projects button{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:600px) {
+    #hamburger{
+        width: 8vw;
+    }
+}

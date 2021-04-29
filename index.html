@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script src="js/dropdown.js" defer></script>
     <title>Timothy Hsu</title>
 </head>
 
@@ -25,8 +26,21 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <div id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     </header>
+    <div id="dropdown">
+        <ul>
+            <li><a href="#bio" class="dropdown-link">About</a></li>
+            <li><a href="#skills" class="dropdown-link">Skills</a></li>
+            <li><a href="#projects" class="dropdown-link">Projects</a></li>
+            <li><a href="#contact" class="dropdown-link">Contact</a></li>
+        </ul>
+    </div>
     <main>
         <div class="scroll-container">
             <section id="bio" class="scroll-child">
@@ -156,7 +170,6 @@
     <footer>
         <p>Timothy Hsu 2021</p>
     </footer>
-
 </body>
 
 </html>
