@@ -4,7 +4,7 @@ html {
 }
 
 .scroll-child {
-    min-height: 100vh;
+    min-height: 320px;
     scroll-snap-align: start;
 }
 
@@ -64,15 +64,21 @@ button:hover {
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    min-height: 320px;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
+    min-width: fit-content;
+}
+
+h2 {
+    text-transform: uppercase;
 }
 
 main, #header-content {
-    padding-left: 22vw;
-    padding-right: 22vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 main {
@@ -183,14 +189,19 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 9vw;
+    width: 18%;
     border-radius: 5px;
 }
 
 #projects {
     height: 100vh;
 }
-#projects .container{
+
+#projects button {
+    width: 90%;
+}
+
+#projects .container {
     height: 90%;
 }
 
@@ -223,6 +234,10 @@ nav a:hover {
     width: inherit;
     display: flex;
     justify-content: space-between;
+}
+
+#projects .cardtext {
+    width: 80%;
 }
 
 #contact {
@@ -271,14 +286,14 @@ footer p {
 #hamburger {
     visibility: hidden;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     height: 60%;
     width: 5vw;
     right: 2vw;
 }
 
 #hamburger div {
-    border-radius: 2px;
+    border-radius: 10px;
     width: 100%;
     height: 12%;
     background-color: black;
@@ -320,34 +335,16 @@ footer p {
     color: #00c2cb;
 }
 
-@media only screen and (max-width:1700px) {
-    main, #header-content {
-        padding-left: 20vw;
-        padding-right: 20vw;
-    }
+@media only screen and (max-width:1700px) and (orientation: portrait) {
     #skills-logos .card {
-        width: 15%;
+        width: 50%;
     }
     #projects img {
         width: 100%;
     }
 }
 
-@media only screen and (max-width:1400px) {
-    main, #header-content {
-        padding-left: 10vw;
-        padding-right: 10vw;
-    }
-}
-
-@media only screen and (max-width:1300px) {
-    main, #header-content {
-        padding-left: 5vw;
-        padding-right: 5vw;
-    }
-}
-
-@media only screen and (max-width:1100px) {
+@media only screen and (max-width:1100px) and (orientation: portrait) {
     #bio img {
         height: 35vw;
     }
@@ -357,7 +354,12 @@ footer p {
 }
 
 @media only screen and (max-width:900px) and (orientation: portrait) {
-    #bio p, #skills p, #projects,button {
+    #header-content img {
+        height: initial;
+        width: 60vw;
+        min-width: 200px;
+    }
+    #bio p, #skills p, #projects, button {
         font-size: 0.8em;
     }
     h2 {
@@ -385,9 +387,9 @@ footer p {
     #skills img {
         height: initial;
         width: 10%;
-        padding:0;
+        padding: 0;
     }
-    #skills .container{
+    #skills .container {
         height: 95%;
         justify-content: center;
         align-items: center;
@@ -398,36 +400,36 @@ footer p {
         justify-content: space-evenly;
         align-items: center;
     }
-    #skills .card{
+    #skills .card {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         width: 90%;
         height: 15%;
     }
-    #skills .card div{
+    #skills .card div {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         width: 85%;
     }
-    #skills h3{
+    #skills h3 {
         text-align: left;
         font-size: 1em;
     }
-    #skills p{
+    #skills p {
         text-align: right;
     }
-    #projects h2{
+    #projects h2 {
         padding-top: 5%;
         padding-bottom: 5%;
     }
-    #projects h3{
+    #projects h3 {
         padding-top: 0;
         padding-bottom: 0;
     }
-    #projects-cards{
+    #projects-cards {
         height: 90%;
         flex-direction: column;
         align-items: center;
@@ -435,19 +437,20 @@ footer p {
     }
     #projects .container {
         height: 85%;
-        display:flex;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
     #projects img {
         width: 38%;
-        margin:0;
+        margin: 0;
     }
     #projects .card {
         height: 28%;
         width: 90%;
-        padding:0px;
-        padding-left: 2%;;
+        padding: 0px;
+        padding-left: 2%;
+        ;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -455,21 +458,117 @@ footer p {
     }
     #projects .cardtext {
         text-align: left;
-        width: 30%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
     #projects button {
         width: 50%;
-
     }
-    
-    
 }
 
 @media only screen and (max-width:600px) {
     #hamburger {
         width: 8vw;
+    }
+}
+
+@media only screen and (max-width:350px) and (orientation: portrait) {
+    #skills h3 {
+        font-size: 5vw;
+    }
+    #skills p {
+        font-size: 4vw;
+    }
+}
+
+@media only screen and (max-height:640px) and (orientation: landscape) {
+    header {
+        height: 15%;
+        min-height: 45px;
+    }
+    #header-content img {
+        height: 10vh;
+        min-height: 42px;
+    }
+    #bio p {
+        font-size: clamp(0.7rem, 3vh, 2rem);
+    }
+    .container {
+        padding-top: 15vh;
+    }
+    #skills button {
+        height: 10%;
+    }
+    #skills p, #skills button {
+        font-size: clamp(0.5rem, 2vh, 2rem);
+    }
+    h2 {
+        font-size: clamp(0.9rem, 3vh, 2rem);
+    }
+    #skills h3 {
+        font-size: clamp(0.8rem, 3vh, 2rem);
+    }
+    #skills .card {
+        width: 20%;
+        height: 40vh;
+        min-height: 140px;
+    }
+    #skills img {
+        height: 10vh;
+        min-height: 40px;
+        padding-bottom: 10%;
+    }
+    #projects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #projects .card {
+        height: 100%;
+        justify-content: space-evenly;
+    }
+    #projects-cards {
+        height: 65%;
+    }
+    #projects .container {
+        padding-top: 2%;
+        height: 80vh;
+        justify-content: center;
+    }
+    #projects img {
+        width: initial;
+        height: 40%;
+    }
+    #projects h2 {
+        padding-bottom: 2%;
+    }
+    #projects h3 {
+        font-size: clamp(0.7rem, 3vh, 2rem);
+        padding-bottom: 0;
+    }
+    #projects p, #projects button, nav li {
+        font-size: clamp(0.7rem, 3vh, 2rem);
+    }
+    #projects button {
+        width: initial;
+        height: 40%;
+    }
+    #contact label, #contact input, #contact button {
+        font-size: clamp(0.7rem, 3vh, 2rem);
+    }
+    #contact form {
+        height: 90%;
+    }
+    #contact .container {
+        padding-left: 0;
+    }
+    #contact button {
+        height: 9vh;
+
+    }
+    #contact div {
+        max-height: 40%;
     }
 }
