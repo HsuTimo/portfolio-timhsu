@@ -206,7 +206,7 @@ nav a:hover {
 }
 
 #projects img {
-    width: 100%;
+    width: 90%;
     margin-bottom: 5%;
     border-radius: 5px;
 }
@@ -356,7 +356,7 @@ footer p {
 @media only screen and (max-width:900px) and (orientation: portrait) {
     #header-content img {
         height: initial;
-        width: 60vw;
+        width: 30vw;
         min-width: 200px;
     }
     #bio p, #skills p, #projects, button {
@@ -446,7 +446,7 @@ footer p {
         margin: 0;
     }
     #projects .card {
-        height: 28%;
+        height: 30%;
         width: 90%;
         padding: 0px;
         padding-left: 2%;
@@ -530,16 +530,15 @@ footer p {
         justify-content: space-evenly;
     }
     #projects-cards {
-        height: 65%;
+        height: 75%;
     }
     #projects .container {
         padding-top: 2%;
-        height: 80vh;
+        height: 89vh;
         justify-content: center;
     }
     #projects img {
-        width: initial;
-        height: 40%;
+        width: 20vw;
     }
     #projects h2 {
         padding-bottom: 2%;
@@ -552,8 +551,9 @@ footer p {
         font-size: clamp(0.7rem, 3vh, 2rem);
     }
     #projects button {
+        margin-top: 5vh;
         width: initial;
-        height: 40%;
+        height: 20%;
     }
     #contact label, #contact input, #contact button {
         font-size: clamp(0.7rem, 3vh, 2rem);
